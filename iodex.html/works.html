@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品頁 - 個人網站作業</title>
+    <style>
+        body { font-family: "Microsoft JhengHei", sans-serif; margin: 0; background-color: #f4f4f4; }
+        nav { background: #2c3e50; padding: 15px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        
+        .container { padding: 20px; }
+        h1 { text-align: center; color: #2c3e50; }
+
+        /* 使用 Flexbox 排版 */
+        .flex-box {
+            display: flex;
+            flex-wrap: wrap; /* 讓內容可以換行 */
+            justify-content: center;
+        }
+
+        .work-item {
+            background: white;
+            border: 2px solid #2c3e50;
+            margin: 10px;
+            padding: 15px;
+            flex: 1 1 calc(40% - 20px); /* 電腦版佔大約一半 */
+        }
+
+        /* RWD 設定：螢幕小於 800px */
+        @media screen and (max-width: 800px) {
+            .work-item {
+                flex: 1 1 100%; /* 手機版變成一欄一個作品 */
+                background-color: #ebf5fb; /* 稍微變色，表示RWD有執行 */
+            }
+        }
+
+        /* RWD 設定：螢幕更小於 400px */
+        @media screen and (max-width: 400px) {
+            body { font-size: 14px; }
+            h1 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">首頁</a>
+        <a href="works.html">作品頁</a>
+        <a href="about.html">關於我</a>
+    </nav>
+
+    <div class="container">
+        <h1>偶的作品集</h1>
+        <div class="flex-box">
+            <div class="work-item">
+                <h3>作品一：兔年賀卡</h3>
+                <p>這是偶用illustrator做的2023年兔年賀卡。</p>
+                <img src="圖片/05＿許晏菱＿兔年賀卡_工作區域 1.jpg" style="width: 800px; height: auto;"  alt="2023兔年賀卡">
+            </div>
+            <div class="work-item">
+                <h3>作品二：物品合成</h3>
+                <p>這是偶用photoshop做的空間物品合成練習。</p>
+                <img src="圖片/d12370106_四動一C-展覽空間-許晏菱-4.jpg" style="width: 800px; height: auto;"  alt="圖片合成">
+            </div>
+            <div class="work-item">
+                <h3>作品三：樹酯板</h3>
+                <p>這是用樹酯板割出圖案，最後印出來的成品。</p>
+                <img src="圖片/魚罐頭5.jpg" style="width: 800px; height: auto;"  alt="樹酯板">
+            </div>
+            <div class="work-item">
+                <h3>作品四：色鉛筆</h3>
+                <p>這是某一年母親節畫的康乃馨。</p>
+                <img src="圖片/康乃馨.jpg" style="width: 800px; height: auto;"  alt="康乃馨">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
