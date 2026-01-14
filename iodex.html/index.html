@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>晏菱的個人網站</title>
+    <style>
+        /* 基礎設定 */
+        body { 
+            font-family: "Microsoft JhengHei", "Heiti TC", sans-serif; 
+            margin: 0; 
+            background-color: #f4f4f4; 
+            color: #333;
+            scroll-behavior: smooth; /* 點選選單時平滑滾動 */
+        }
+
+        /* 導覽列 */
+        nav { 
+            background: #2c3e50; 
+            padding: 15px; 
+            text-align: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+        }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { color: #3498db; }
+
+        /* 通用容器 */
+        .section { 
+            padding: 60px 20px; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+        }
+
+        /* 首頁區塊 */
+        #home { text-align: center; background: white; margin-bottom: 20px; border-bottom: 5px solid #2c3e50; }
+        .hero-img { max-width: 100%; height: auto; border: 5px solid #2c3e50; margin-top: 15px; }
+
+        /* 作品集區塊 (Flexbox) */
+        .flex-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .work-item {
+            background: white;
+            border: 2px solid #2c3e50;
+            margin: 10px;
+            padding: 15px;
+            flex: 1 1 calc(45% - 20px);
+            box-sizing: border-box;
+        }
+        .work-item img { width: 100%; height: auto; margin-top: 10px; }
+
+        /* 關於我區塊 */
+        .about-content { 
+            background: white; 
+            padding: 30px; 
+            border-left: 10px solid #2c3e50; 
+            text-align: left;
+        }
+        h1, h2, h3 { color: #2c3e50; }
+        h2 { border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+
+        /* RWD 響應式設定 */
+        @media screen and (max-width: 800px) {
+            .work-item { flex: 1 1 100%; background-color: #ebf5fb; }
+            .section { padding: 40px 15px; }
+        }
+
+        @media screen and (max-width: 400px) {
+            body { font-size: 14px; }
+            h1 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">首頁</a>
+        <a href="#works">作品頁</a>
+        <a href="#about">關於我</a>
+    </nav>
+
+    <section id="home" class="section">
+        <h1>晏菱的個人網站</h1>
+        <p>歡迎來到偶的網站(ᕑᗢᓫ∗)˒</p>
+        <img src="img/card.jpg" alt="我的名片" class="hero-img">
+    </section>
+
+    <section id="works" class="section">
+        <h2 style="text-align: center;">偶的作品集</h2>
+        <div class="flex-box">
+            <div class="work-item">
+                <h3>作品一：兔年賀卡</h3>
+                <p>這是偶用 Illustrator 做的 2023 年兔年賀卡。</p>
+                <img src="img/rabbit.jpg" alt="2023兔年賀卡">
+            </div>
+            <div class="work-item">
+                <h3>作品二：物品合成</h3>
+                <p>這是偶用 Photoshop 做的空間物品合成練習。</p>
+                <img src="img/synthesis.jpg" alt="圖片合成">
+            </div>
+            <div class="work-item">
+                <h3>作品三：樹酯板</h3>
+                <p>這是用樹酯板割出圖案，最後印出來的成品。</p>
+                <img src="img/fish.jpg" alt="樹酯板">
+            </div>
+            <div class="work-item">
+                <h3>作品四：色鉛筆</h3>
+                <p>這是某一年母親節畫的康乃馨。</p>
+                <img src="img/flower.jpg" alt="康乃馨">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="about-content">
+            <article>
+                <h2>偶的個人介紹</h2>
+                <p>嗨嘍！偶是一個大三生，最喜歡的事情是唱歌，還有創作跟思考，歡迎跟我交朋友。</p>
+            </article>
+
+            <article>
+                <h2>偶的技能與興趣</h2>
+                <ul>
+                    <li><strong>技能：</strong>HTML5, CSS3 基礎, Illustrator, Photoshop</li>
+                    <li><strong>興趣：</strong>聽音樂、唱歌、收集喜歡的東西</li>
+                </ul>
+            </article>
+
+            <article>
+                <h2>聯絡方式</h2>
+                <p>有事找偶，沒事也可以找偶ʕ•̀ ω • ʔ：</p>
+                <p>Email: <a href="mailto:d12370106@gm.tut.edu.tw">d12370106@gm.tut.edu.tw</a></p>
+            </article>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 20px; color: #888; font-size: 12px;">
+        &copy; 2024 晏菱個人網站作業
+    </footer>
+
+</body>
+</html>
